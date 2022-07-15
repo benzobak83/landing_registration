@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/login.js"></script>
+    <script src="js/reg_validator.js"></script>
+    <script src="js/onsubmit.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main__inner">
+            <div class="main__title">
+                <span class="main__title-first">Benzo</span><span class="main__title-second">Tasking</span>
+            </div>
+            <div class="main__wrapper">
+                <div class="main__buttons">
+                    
+                    <button class="main__btn-start">Приступить</button>
+                    <img src="img/rocket.png" alt="" class="main__rocket-img rocket-img_disable">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__log-inner">
+                <div class="popup__title">
+                    <div class="popup__a"><a href="#" class="a__login popup__btns a__focus">ВОЙТИ</a> <a href="#"
+                            class="a__reg popup__btns">РЕГИСТРАЦИЯ</a></div>
+                    <div class="popup__close"><a href="#" class="close__a">Х</a></div>
+                    <div class="error-form"><span class="error-form__text">Некорректные данные</span></div>
+                       
+                    
+                </div>
+                <div class="wrapper-form">
+                    <form class="log__form form">
+                        <div class="log__div-user  log__label div_values">ЛОГИН</div>
+                        <input class="form__value" type="text" id="log__username" maxlength="30" autocomplete="off"
+                            placeholder="Введите ваш логин">
+                        <div class="log__div-password log__label div_values">ПАРОЛЬ</div>
+                        <input class="form__value" type="password" id="log__password" maxlength="30" autocomplete="off"
+                            placeholder="Введите ваш пароль">
+                        <input class='btn_submit' type="submit" id="submit" value="ВОЙТИ">
+                    </form>
+
+                    <div class="footer-form">
+                        <div class="footer-form__border"></div>
+                        <div class="footer-form__forgetpw"> <a href="#" class="footer-form__link">Забыли пароль?</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="wrapper-form-reg">
+                    <form class="reg__form form" method="POST" action="php/actions/add_raw.php" onsubmit="return checkerForm()">
+                        <div class="reg__iner">
+                        <div class="reg__div-user  log__label div_values">ЛОГИН</div>
+                        <input class="form__value value-reg" type="text" id="reg__username" name="reg__username" maxlength="30" autocomplete="off" value=""
+                            placeholder="Придумайте ваш логин">
+                            <span class="value_error err_login"></span>
+                    </div>
+                    <div class="reg__iner">
+                        <div class="reg__div-password log__label div_values">ПАРОЛЬ</div>
+                        <input class="form__value value-reg" type="password" id="reg__password" name="reg__password" maxlength="30" autocomplete="off"
+                            placeholder="Придумайте ваш пароль">
+                            <span class="value_error err_pass"></span>
+                        
+                    </div>
+                            <div class="reg__iner">
+                            <div class="log__div-password-confirm  log__label div_values">ПОДТВЕРЖДЕНИЕ ПАРОЛЯ</div>
+                        <input class="form__value" type="password" id="reg__password-confirm" name="reg__password-confirm" maxlength="30" autocomplete="off"
+                            placeholder="Введите пароль повторно">
+                            <span class="value_error err_pass-confirm"></span>
+                        </div>
+                            <div class="reg__iner">
+                        <div class="log__div-email  log__label div_values">EMAIL</div>
+                        <input class="form__value value-reg" type="email" id="reg__email" name="reg__email" maxlength="30" autocomplete="off"
+                            placeholder="Укажите вашу почту">
+                            <span class="value_error err_email"></span>
+                        </div>
+                       
+                    <div class="inner__reg-submit"><input class='btn_submit reg-submit' type="submit" id="reg_submit" value="ЗАРЕГИСТРИРОВАТЬСЯ"></div>
+                    
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
